@@ -21,19 +21,20 @@ export default function CompanyProfile() {
       {/* ================================
           TOP BANNER (FULL LOGO)
       =================================*/}
-      <div className="relative w-full h-[40vh]  flex items-center justify-center overflow-hidden">
-        {/* FULLSCREEN LOGO */}
+
+      <div className="relative w-full h-[40vh] md:h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* FULLSCREEN LOGO / BANNER */}
         <img
           src="/logo.jpeg"
           alt="Infinity Logo"
           className="w-full h-full object-cover opacity-90"
         />
 
-        {/* Dark overlay for mobile readability */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden absolute top-4  left-6 z-30">
+        <div className="md:hidden absolute top-4 left-6 z-30">
           <button
             onClick={() => setOpen(!open)}
             className="bg-white/80 p-2 rounded-md shadow-md"
@@ -43,12 +44,13 @@ export default function CompanyProfile() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex absolute top-2 left-1/2 -translate-x-1/2 gap-4 z-30">
+        <div className="hidden md:flex absolute top-6 left-1/2 -translate-x-1/2 gap-4 z-30">
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className="bg-white/80 backdrop-blur text-blue-900 py-2 px-4 rounded-lg font-semibold shadow hover:bg-blue-200 transition"
+              className="bg-white/80 backdrop-blur text-blue-900 py-2 px-4 rounded-lg font-semibold 
+                   shadow hover:bg-blue-200 transition"
             >
               {item.name}
             </Link>
@@ -57,7 +59,7 @@ export default function CompanyProfile() {
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="absolute top-15 left-6 right-6 bg-white/95 rounded-xl shadow-xl p-2  z-20 animate-slide-down">
+          <div className="absolute top-16 left-6 right-6 bg-white/95 rounded-xl shadow-xl p-2 z-20 animate-slide-down">
             {navItems.map((item, index) => (
               <Link
                 key={index}
