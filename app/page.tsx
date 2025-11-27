@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi2";
+
 
 export default function CompanyProfile() {
   const [open, setOpen] = useState(false);
