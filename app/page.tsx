@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function CompanyProfile() {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,9 @@ export default function CompanyProfile() {
 
   return (
     <div className="w-full min-h-screen bg-white font-sans relative">
+      {/* ================================
+          TOP BANNER (FULL LOGO)
+      =================================*/}
       <div className="relative w-full h-[40vh]  flex items-center justify-center overflow-hidden">
         {/* FULLSCREEN LOGO */}
         <img
@@ -32,7 +36,9 @@ export default function CompanyProfile() {
           <button
             onClick={() => setOpen(!open)}
             className="bg-white/80 p-2 rounded-md shadow-md"
-          ></button>
+          >
+            {open ? <HiX size={30} /> : <HiMenu size={30} />}
+          </button>
         </div>
 
         {/* Desktop Menu */}
