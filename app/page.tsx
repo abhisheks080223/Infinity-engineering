@@ -17,12 +17,10 @@ export default function CompanyProfile() {
 
   return (
     <div className="w-full min-h-screen bg-white font-sans relative">
-
       {/* ================================
           TOP BANNER (FULL LOGO)
       =================================*/}
       <div className="relative w-full h-[40vh]  flex items-center justify-center overflow-hidden">
-
         {/* FULLSCREEN LOGO */}
         <img
           src="/logo.jpeg"
@@ -31,7 +29,7 @@ export default function CompanyProfile() {
         />
 
         {/* Dark overlay for mobile readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden absolute top-6 left-6 z-30">
@@ -102,4 +100,4 @@ export default function CompanyProfile() {
       </div>
     </div>
   );
-}   
+}
