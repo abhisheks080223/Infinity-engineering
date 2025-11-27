@@ -4,8 +4,6 @@ import Link from "next/link";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
 
-
-
 export default function CompanyProfile() {
   const [open, setOpen] = useState(false);
 
@@ -35,17 +33,17 @@ export default function CompanyProfile() {
         <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden absolute top-6 left-6 z-30">
+        <div className="md:hidden absolute top-4  left-6 z-30">
           <button
             onClick={() => setOpen(!open)}
             className="bg-white/80 p-2 rounded-md shadow-md"
           >
-            {open ? <HiMiniXMark size={30} /> : <HiMiniBars3 size={30} />}
+            {open ? <HiMiniXMark size={15} /> : <HiMiniBars3 size={15} />}
           </button>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex absolute top-6 left-1/2 -translate-x-1/2 gap-6 z-30">
+        <div className="hidden md:flex absolute top-2 left-1/2 -translate-x-1/2 gap-4 z-30">
           {navItems.map((item, index) => (
             <Link
               key={index}
@@ -59,7 +57,7 @@ export default function CompanyProfile() {
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="absolute top-20 left-6 right-6 bg-white/95 rounded-xl shadow-xl p-4 space-y-4 z-30 animate-slide-down">
+          <div className="absolute top-15 left-6 right-6 bg-white/95 rounded-xl shadow-xl p-2  z-20 animate-slide-down">
             {navItems.map((item, index) => (
               <Link
                 key={index}
