@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi2";
+import { HiMiniBars3 } from "react-icons/hi2";
+import { HiMiniXMark } from "react-icons/hi2";
+
 
 
 export default function CompanyProfile() {
@@ -38,7 +40,7 @@ export default function CompanyProfile() {
             onClick={() => setOpen(!open)}
             className="bg-white/80 p-2 rounded-md shadow-md"
           >
-            {open ? <HiX size={30} /> : <HiMenu size={30} />}
+            {open ? <HiMiniXMark size={30} /> : <HiMiniBars3 size={30} />}
           </button>
         </div>
 
