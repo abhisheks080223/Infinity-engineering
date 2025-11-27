@@ -1,83 +1,111 @@
-
-import React from "react";
+import Image from "next/image";
 
 export default function ProductPortfolio() {
   return (
-    <div className="w-full bg-[#f5f5f5] pb-16">
-      {/* ---------- TOP HEADER WITH RED BAR ---------- */}
-      <div className="relative w-full bg-white">
-        <div className="flex">
-          {/* Left Red Bar */}
-          <div className="bg-red-700 w-6 sm:w-10 md:w-16 h-full"></div>
+    <div className="w-full bg-white min-h-screen font-sans">
+      {/* Header Section */}
+      <div className="w-full py-10 px-6 md:px-16 bg-white relative">
+        <Image
+          src="/logo.jpeg"
+          alt="Infinity Logo"
+          width={140}
+          height={60}
+          className="mb-4"
+        />
 
-          {/* Title Section */}
-          <div className="pl-6 py-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-red-700 leading-tight">
-              Our <br /> Product Portfolio
-            </h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-red-700 leading-tight">
+          Our <br /> Product Portfolio
+        </h1>
 
-            {/* Red underline */}
-            <div className="w-20 h-1 bg-red-700 mt-3"></div>
-          </div>
-        </div>
+        <div className="w-20 h-1 bg-red-700 mt-3"></div>
       </div>
 
-      {/* ---------- PRODUCT IMAGE GRID ---------- */}
-      <div className="px-6 md:px-16 pt-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          {/* Top Left Big Image */}
-          <img
-            src="/portfolio/p1.png"
-            className="rounded-lg shadow-md w-full object-cover"
-            alt=""
-          />
-
-          {/* Top Right Big Image */}
-          <img
-            src="/portfolio/p2.png"
-            className="rounded-lg shadow-md w-full object-cover"
-            alt=""
-          />
-
-          {/* Middle Large Door Image */}
-          <img
-            src="/portfolio/p3.png"
-            className="rounded-lg shadow-md w-full object-cover sm:col-span-2 lg:col-span-1"
-            alt=""
-          />
-
-          {/* Small Images Row */}
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/portfolio/p4.png"
-              className="rounded-lg shadow-md w-full object-cover"
-              alt=""
-            />
-            <img
-              src="/portfolio/p5.png"
-              className="rounded-lg shadow-md w-full object-cover"
-              alt=""
+      {/* Full Page Layout */}
+      <div className="px-6 md:px-16 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Large Left Image */}
+          <div className="col-span-1 md:col-span-1">
+            <Image
+              src="/port1.png"
+              alt="Product"
+              width={700}
+              height={500}
+              className="rounded shadow"
             />
           </div>
 
-          {/* Small Red Rectangle (as shown in your design) */}
-          <div className="w-full h-full bg-red-700 rounded-md"></div>
+          {/* Two Top Right Images */}
+          <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-6">
+            <Image
+              src="/port2.png"
+              alt="Product"
+              width={500}
+              height={300}
+              className="rounded shadow"
+            />
+            <Image
+              src="/port3.png"
+              alt="Product"
+              width={500}
+              height={300}
+              className="rounded shadow"
+            />
+          </div>
 
-          {/* Right Door Image */}
-          <img
-            src="/portfolio/p6.png"
-            className="rounded-lg shadow-md w-full object-cover"
-            alt=""
-          />
+          {/* Middle Product (Large Door) */}
+          <div className="col-span-1 md:col-span-2">
+            <Image
+              src="/port5.png"
+              alt="Double Door"
+              width={900}
+              height={600}
+              className="rounded shadow"
+            />
+          </div>
 
-          {/* Bottom Fire Glass Image */}
-          <img
-            src="/portfolio/p7.png"
-            className="rounded-lg shadow-md w-full object-cover sm:col-span-2"
-            alt=""
-          />
+          {/* Small Middle Right Image */}
+          <div className="col-span-1">
+            <Image
+              src="/port4.png"
+              alt="Office Light Pattern"
+              width={500}
+              height={300}
+              className="rounded shadow"
+            />
+          </div>
 
+          {/* Small Middle Right 2 */}
+          <div className="col-span-1">
+            <Image
+              src="/port4.png"
+              alt="Office Glass Area"
+              width={500}
+              height={300}
+              className="rounded shadow"
+            />
+          </div>
+
+          {/* Fireproof Glass */}
+          <div className="col-span-1">
+            <Image
+              src="/port7.png"
+              alt="Fire Glass"
+              width={600}
+              height={400}
+              className="rounded shadow"
+            />
+          </div>
+
+          {/* Bottom Right Door Image */}
+          <div className="col-span-1 md:col-span-1">
+            <Image
+              src="/port6.png"
+              alt="Door"
+              width={600}
+              height={400}
+              className="rounded shadow"
+            />
+          </div>
         </div>
       </div>
     </div>
