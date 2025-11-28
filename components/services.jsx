@@ -644,33 +644,47 @@ export default function FireProductsPage() {
             OUR <span className="text-red-600">CLIENTS</span>
           </h1>
 
-          <div className="max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-10">
-            {[
-              "/clients/jll.png",
-              "/clients/zara.png",
-              "/clients/dlf.png",
-              "/clients/itc.png",
-              "/clients/max.png",
-              "/clients/sptl.png",
-              "/clients/infinity.png",
-              "/clients/holidayinn.png",
-              "/clients/shell.png",
-              "/clients/colonade.png",
-              "/clients/boa.png",
-              "/clients/deloitte.png",
-            ].map((src, idx) => (
-              <div
-                key={idx}
-                className="relative w-28 sm:w-32 h-16 sm:h-20 mx-auto"
-              >
-                <Image
-                  src={src}
-                  alt={`Client ${idx + 1}`}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            ))}
+          <div className="relative w-full py-10">
+            {/* Background Logo */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-50">
+              <Image
+                src="/logobg.png"
+                alt="Background Logo"
+                width={800}
+                height={800}
+                className="object-contain"
+              />
+            </div>
+
+            {/* Clients Grid */}
+            <div className="relative max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-10 sm:gap-20">
+              {[
+                "/jll.jpg",
+                "/zara.png",
+                "/dlf.png",
+                "/itc.jpg",
+                "/max.avif",
+                "/sptl.jpeg",
+                "/holidayinn.jpg",
+                "/shell.png",
+                "/colonade.jpg",
+                "/boa.jpg",
+                "/deloitte.png",
+                "/samsung.png",
+              ].map((src, idx) => (
+                <div
+                  key={idx}
+                  className="relative w-28 sm:w-32 h-16 sm:h-20 mx-auto"
+                >
+                  <Image
+                    src={src}
+                    alt={`Client ${idx + 1}`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
