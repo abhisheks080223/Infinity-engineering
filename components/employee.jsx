@@ -20,7 +20,7 @@ export default function FounderAndTeam() {
       <div className="max-w-5xl w-full bg-white shadow-lg rounded-lg overflow-hidden relative print:shadow-none">
 
         {/* LEFT STRIPE */}
-        <div className="absolute left-0 top-0 h-full w-[8px] sm:w-[10px] bg-[#B30000]" />
+        <div className="absolute left-0 top-0 h-full w-2 sm:w-2.5 bg-[#B30000]" />
 
         {/* CONTENT */}
         <div className="p-6 sm:p-10">

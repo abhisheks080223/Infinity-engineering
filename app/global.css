@@ -1,0 +1,10 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* FULL PAGE WHITE BACKGROUND FIX */
+html,
+body {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
